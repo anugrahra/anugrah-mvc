@@ -1,4 +1,8 @@
 <?php
 
+//nanti bisa pakai autoloading
+
 require_once 'core/App.php';
 require_once 'core/Controller.php';
+
+require_once 'core/Constants.php';
