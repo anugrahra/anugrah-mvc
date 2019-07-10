@@ -1,2 +1,2 @@
-
-    <h1><?=$data['judul'];?></h1>
+<h1><?=$data['post']['judul'];?></h1>
+<p><?=$data['post']['isi'];?></p>

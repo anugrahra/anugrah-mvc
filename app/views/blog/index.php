@@ -1,6 +1,4 @@
     <?php foreach ($data['post'] as $post) : ?>
-    <h1><?=$post['judul'];?></h1>
+    <a href="<?=BASEURL;?>/blog/post/<?=$post['id'];?>"><h1><?=$post['judul'];?></h1></a>
     <p><?=$post['isi'];?></p>
 <?php endforeach; ?>
-</body>
-</html>
