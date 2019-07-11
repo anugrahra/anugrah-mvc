@@ -11,7 +11,7 @@ class Blog_model {
 
     public function getAllPost()
     {
-        $this->db->query('SELECT * FROM ' . $this->table);
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC');
         return $this->db->resultSet();
     }
 
@@ -19,6 +19,13 @@ class Blog_model {
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
+        return $this->db->single();
+    }
+
+    public function getPostBySlug($slug)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE slug=:slug');
+        $this->db->bind('slug', $slug);
         return $this->db->single();
     }
 }

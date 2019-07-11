@@ -11,4 +11,5 @@
     <ul>
         <li><a href="<?=BASEURL;?>">Home</a></li>
         <li><a href="<?=BASEURL;?>/blog">Blog</a></li>
+        <li><a href="<?=BASEURL;?>/podcast">Podcast</a></li>
     </ul>

@@ -10,10 +10,10 @@ class Blog extends Controller {
         $this->view('templates/footer');
     }
 
-    public function post($id)
+    public function post($slug)
     {
         $data['title'] = 'Nanti diambil dari database';
-        $data['post'] = $this->model('Blog_model')->getPostById($id);
+        $data['post'] = $this->model('Blog_model')->getPostBySlug($slug);
         $this->view('templates/header', $data);
         $this->view('blog/post', $data);
         $this->view('templates/footer');
