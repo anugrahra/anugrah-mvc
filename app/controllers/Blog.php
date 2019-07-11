@@ -3,7 +3,7 @@
 class Blog extends Controller {
     public function index()
     {
-        $data['title'] = 'Blog';
+        $data['title'] = 'Blog dekadensiotak';
         $data['post'] = $this->model('Blog_model')->getAllPost();
         $this->view('templates/header', $data);
         $this->view('blog/index', $data);
@@ -12,8 +12,8 @@ class Blog extends Controller {
 
     public function post($slug)
     {
-        $data['title'] = 'Nanti diambil dari database';
         $data['post'] = $this->model('Blog_model')->getPostBySlug($slug);
+        $data['title'] = $data['post']['judul'] . ' | Blog dekadensiotak';
         $this->view('templates/header', $data);
         $this->view('blog/post', $data);
         $this->view('templates/footer');
