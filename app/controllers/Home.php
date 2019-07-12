@@ -3,10 +3,7 @@
 class Home extends Controller {
     public function index()
     {
-        $data['title'] = 'Home';
-        $data['nama'] = $this->model('User_model')->getUser();
-        $this->view('templates/header', $data);
+        $data['title'] = 'Anugrah Ramadhan - A Plumber who learns Coding';
         $this->view('home/index', $data);
-        $this->view('templates/footer');
     }
 }

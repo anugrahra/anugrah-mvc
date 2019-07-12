@@ -1,3 +1,73 @@
-h1 {
-    color: red;
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+
+* {
+    margin: 0;
+    padding: 0;
 }
+
+a {
+    color: #485d6f;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-color: #E6E6E6;
+}
+
+/* INDEX */
+.container {
+    height: 100vh;
+    position: relative;
+    font-family: 'Courier', serif;
+    color: #485d6f;
+}
+
+.headerhome {
+    margin-bottom: 2px;
+}
+
+.tagline {
+    margin-bottom: 20px;
+}
+
+.headerhome {
+    margin-bottom: 2px;
+}
+
+.tagline {
+    margin-bottom: 20px;
+}
+
+.isi {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.homemenu {
+    margin-bottom: 20px;
+}
+
+.homemenu ul {
+    list-style-type: none;
+}
+
+.homemenu li {
+    margin-bottom: 5px;
+}
+
+.footerhome {
+    font-size: 0.75em;
+    color: grey;
+}
+/* END OF INDEX */
