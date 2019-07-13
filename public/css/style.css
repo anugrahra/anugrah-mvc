@@ -71,3 +71,67 @@ hr {
     color: grey;
 }
 /* END OF INDEX */
+
+/* BLOG */
+.homelink {
+    font-family: 'Courier', serif;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.homelinkblog {
+    font-family: 'Courier', serif;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.menublog {
+    text-align: center;
+}
+
+.maincontainer {
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Courier', serif;
+    color: #000;
+}
+
+.isi {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.mainisi {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: rgb(87, 87, 87);
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.artikel {
+    margin-bottom: 50px;
+}
+
+.aftertitle {
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3rem;
+}
+
+.aftertitle a {
+    color: orange;
+}
+
+.content {
+    word-spacing: 2px;
+    letter-spacing: .00836rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}

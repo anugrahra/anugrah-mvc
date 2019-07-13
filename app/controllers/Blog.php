@@ -6,6 +6,7 @@ class Blog extends Controller {
         $data['title'] = 'Blog dekadensiotak';
         $data['post'] = $this->model('Blog_model')->getAllPost();
         $this->view('templates/header', $data);
+        $this->view('templates/homelinkblog');
         $this->view('blog/index', $data);
         $this->view('templates/footer');
     }
