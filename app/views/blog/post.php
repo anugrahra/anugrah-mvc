@@ -37,3 +37,8 @@ if ($readtime >= 1)
 </div>
 
 <hr>
+
+<div class="homelink">
+    <p><a href="<?=BASEURL;?>/blog">&lt; blog</a> | <a href="../list">list of posts</a></p>
+	<p><a href="<?=BASEURL;?>">&lt; home</a></p>
+</div>
