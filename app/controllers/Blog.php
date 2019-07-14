@@ -19,4 +19,13 @@ class Blog extends Controller {
         $this->view('blog/post', $data);
         $this->view('templates/footer');
     }
+
+    public function list()
+    {
+        $data['title'] = 'Post list of Blog dekadensiotak';
+        $data['list'] = $this->model('Blog_model')->getAllPost();
+        $this->view('templates/header', $data);
+        $this->view('blog/list', $data);
+        $this->view('templates/footer');
+    }
 }
