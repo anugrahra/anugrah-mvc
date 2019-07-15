@@ -4,7 +4,7 @@ class Blog extends Controller {
     public function index()
     {
         $data['title'] = 'Blog dekadensiotak';
-        $data['post'] = $this->model('Blog_model')->getAllPost();
+        $data['post'] = $this->model('Blog_model')->getAllPostLimited();
         $this->view('templates/header', $data);
         $this->view('templates/homelinkblog');
         $this->view('blog/index', $data);

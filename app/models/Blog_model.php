@@ -15,17 +15,25 @@ class Blog_model {
         return $this->db->resultSet();
     }
 
-    public function getPostById($id)
+    public function getAllPostLimited()
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-        $this->db->bind('id', $id);
-        return $this->db->single();
+        global $start; 
+
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT ' . $start . ' , 3');
+        return $this->db->resultSet();
     }
 
     public function getPostBySlug($slug)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE slug=:slug');
         $this->db->bind('slug', $slug);
+        return $this->db->single();
+    }
+
+    public function getPostById($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->bind('id', $id);
         return $this->db->single();
     }
 }
