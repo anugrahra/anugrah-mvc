@@ -21,4 +21,11 @@ class Podcast_model {
         $this->db->bind('id', $id);
         return $this->db->single();
     }
+
+    public function getEpisodeBySlug($slug)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE slug=:slug');
+        $this->db->bind('slug', $slug);
+        return $this->db->single();
+    }
 }
