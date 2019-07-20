@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="isi">
 			<header class="headerhome">
-				<h1>anugrah.club</h1>
+				<h1>anugrah ramadhan</h1>
 			</header>
 			<main>
 				<div class="tagline">
@@ -28,7 +28,7 @@
 				</nav>
 			</main>
 			<footer class="footerhome">
-				<p>Anugrah Ramadhan &copy; 2017 - present.</p>
+				<p><i>dekadensiotak</i> &copy; 2017 - present.</p>
 			</footer>
 		</div>		
 	</div>

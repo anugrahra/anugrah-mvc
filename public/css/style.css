@@ -156,3 +156,18 @@ hr {
     text-align: right;
 }
 /* END OF BLOG */
+
+/* PODCAST */
+.framePodcast {
+    background-color: #E6E6E6;
+}
+
+.listepisodes {
+    font-size: 0.90em;
+    margin-bottom: 10px;
+}
+
+.captionpodcast {
+    margin-top: 5px;
+}
+/* END OF PODCAST */

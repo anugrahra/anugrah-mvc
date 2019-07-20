@@ -15,13 +15,6 @@ class Podcast_model {
         return $this->db->resultSet();
     }
 
-    public function getEpisodeById($id)
-    {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-        $this->db->bind('id', $id);
-        return $this->db->single();
-    }
-
     public function getEpisodeBySlug($slug)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE slug=:slug');

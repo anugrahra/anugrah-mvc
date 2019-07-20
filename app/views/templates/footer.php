@@ -1,6 +1,6 @@
 	</div>
 <footer class="mainfooter">
-	<p class="menublog">Anugrah Ramadhan &copy; 2017 - present.</p>
+	<p class="menublog"><i>dekadensiotak</i> &copy; 2017 - present.</p>
 </footer>
 </div>
 

@@ -28,11 +28,4 @@ class Blog_model {
         $this->db->bind('slug', $slug);
         return $this->db->single();
     }
-
-    public function getPostById($id)
-    {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-        $this->db->bind('id', $id);
-        return $this->db->single();
-    }
 }
