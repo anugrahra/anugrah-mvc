@@ -4,7 +4,8 @@ class Podcast extends Controller {
     public function index()
     {
         $data['title'] = 'Podcast dekadensiotak';
-        // $data['post'] = $this->model('Podcast_model')->getAllEpisode();
+        $data['episodes'] = $this->model('Podcast_model')->getAllEpisode();
+        $data['recent'] = $this->model('Podcast_model')->getRecentEpisode();
         $this->view('templates/header', $data);
         $this->view('templates/homelink');
         $this->view('podcast/index', $data);

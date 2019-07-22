@@ -1,7 +1,7 @@
 <?php
 
 class Podcast_model {
-    private $table = 'podcast';
+    private $table = 'episode';
     private $db;
 
     public function __construct()
@@ -11,7 +11,13 @@ class Podcast_model {
 
     public function getAllEpisode()
     {
-        $this->db->query('SELECT * FROM ' . $this->table);
+        $this->db->query('SELECT * FROM ' . $this->table. ' ORDER BY id DESC');
+        return $this->db->resultSet();
+    }
+
+    public function getRecentEpisode()
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 1');
         return $this->db->resultSet();
     }
 
