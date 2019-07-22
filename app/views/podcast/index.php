@@ -7,16 +7,19 @@
 
 <div class="framePodcast">
 	<iframe src="https://anchor.fm/dekadensiotak/embed/episodes/42--episode-42-e4ka2e" height="150px" width="100%" frameborder="0" scrolling="no"></iframe>
-	<center><p>caption</p></center>
+	<p class="tengah">caption</p>
 	<br>
 </div>
 
 <br>
 
-<center>
-	<p>Also available at:&nbsp;&nbsp;<a href="https://open.spotify.com/show/7CXYFUB7c8vx1OqYCSihaC" style="text-decoration: underline;"><img src="<?=BASEURL;?>/public/img/spotify.png" height="25px"></a> | <a href="https://itunes.apple.com/us/podcast/dekadensiotak/id1438352066?mt=2&uo=4" style="text-decoration: underline;"><img src="<?=BASEURL;?>/public/img/apple_podcasts.png" height="25px"> Apple Podcasts</a></p>
-	<h1>List of Episodes</h1>
-</center>
+<div class="mainpodcast">
+	<p>Listen on:&nbsp;&nbsp;<a href="https://open.spotify.com/show/7CXYFUB7c8vx1OqYCSihaC" style="text-decoration: underline;"><img src="<?=BASEURL;?>/public/img/spotify.png" height="25px"></a>&nbsp;<a href="https://itunes.apple.com/us/podcast/dekadensiotak/id1438352066?mt=2&uo=4" style="text-decoration: underline;"><img src="<?=BASEURL;?>/public/img/apple_podcast.png" height="25px"></a></p>
+	<br>
+	<hr>
+	<br>
+    <h1>List of Episodes</h1>
+</div>
 
 <br>
 

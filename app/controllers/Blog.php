@@ -11,6 +11,15 @@ class Blog extends Controller {
         $this->view('templates/footer');
     }
 
+    public function page($start)
+    {
+        $data['title'] = 'Blog dekadensiotak';
+        $this->view('templates/header', $data);
+        $this->view('templates/homelinkblog');
+        $this->view('blog/page', $data);
+        $this->view('templates/footer');
+    }
+
     public function post($slug)
     {
         $data['post'] = $this->model('Blog_model')->getPostBySlug($slug);

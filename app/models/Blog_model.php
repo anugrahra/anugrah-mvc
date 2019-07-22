@@ -18,7 +18,7 @@ class Blog_model {
     public function getAllPostLimited()
     {
 
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC');
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 3');
         return $this->db->resultSet();
     }
 

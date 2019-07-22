@@ -31,6 +31,10 @@ if ($readtime >= 1)
 
 <?php endforeach; ?>
 
+<div class="prevnext">
+	<a href="blog/page/2">Prev ></a>
+</div>
+
 <div class="homelink">
 	<p><a href="<?=BASEURL;?>">&lt; home</a></p>
 </div>

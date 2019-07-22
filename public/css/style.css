@@ -21,6 +21,15 @@ hr {
     border-color: #E6E6E6;
 }
 
+.tengah {
+    text-align: center;
+}
+
+.prevnext {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 /* INDEX */
 .container {
     height: 100vh;
@@ -72,6 +81,7 @@ hr {
 }
 
 .mainfooter {
+    text-align: center;
     margin-top: 50px;
     margin-bottom: 10px;
     font-size: 0.75em;
@@ -90,10 +100,6 @@ hr {
     font-family: 'Courier', serif;
     margin-top: 10px;
     margin-bottom: 25px;
-}
-
-.menublog {
-    text-align: center;
 }
 
 .maincontainer {
@@ -158,6 +164,11 @@ hr {
 /* END OF BLOG */
 
 /* PODCAST */
+.mainpodcast {
+    align-content: center;
+    text-align: center;
+}
+
 .framePodcast {
     background-color: #E6E6E6;
 }
