@@ -1,4 +1,12 @@
-<?php foreach ($data['post'] as $post):
+<div class="tagTitle">
+<?php foreach ($data['label'] as $label): ?>
+    <h1><?=$label['tag']?>&nbsp;&nbsp;</h1>
+<?php endforeach; ?>
+</div>
+
+<br>
+
+<?php foreach ($data['bytag'] as $post):
 
 //spasi paragraf
 $pecah = explode("\r\n\r\n", $post['isi']);
@@ -23,17 +31,13 @@ if ($readtime >= 1)
 
 <div class="artikel">
 	<div class="title">
-		<h1><a href="blog/post/<?=$post['slug'];?>"><?= $post['judul']; ?></a></h1>
+		<h1><a href="<?=BASEURL;?>/blog/post/<?=$post['slug'];?>"><?= $post['judul']; ?></a></h1>
 	</div>
 	<div class="aftertitle"><?= date('d F Y', strtotime($post['waktu'])); ?> • <?=$readtime;?> • <a href="blog/tag/<?=$post['tag'];?>"><?= $post['tag']; ?></a></div>
 	<p class="content"><?=$text;?></p>
 </div>
 
 <?php endforeach; ?>
-
-<div class="prevnext">
-	<a href="blog/page/2">Prev ></a>
-</div>
 
 <div class="homelink">
 	<p><a href="<?=BASEURL;?>">&lt; home</a></p>

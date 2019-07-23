@@ -37,4 +37,15 @@ class Blog extends Controller {
         $this->view('blog/list', $data);
         $this->view('templates/footer');
     }
+
+    public function tag($tag)
+    {
+        $data['title'] = 'Blog dekadensiotak';
+        $data['bytag'] = $this->model('Blog_model')->getAllPostByTag($tag);
+        $data['label'] = $this->model('Blog_model')->forTagLabel($tag);
+        $this->view('templates/header', $data);
+        $this->view('templates/homelinkblog');
+        $this->view('blog/tag', $data);
+        $this->view('templates/footer');
+    }
 }

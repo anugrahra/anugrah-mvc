@@ -28,4 +28,18 @@ class Blog_model {
         $this->db->bind('slug', $slug);
         return $this->db->single();
     }
+
+    public function getAllPostByTag($tag)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE tag=:tag');
+        $this->db->bind('tag', $tag);
+        return $this->db->resultSet();
+    }
+
+    public function forTagLabel($tag)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE tag=:tag LIMIT 1');
+        $this->db->bind('tag', $tag);
+        return $this->db->resultSet();
+    }
 }
