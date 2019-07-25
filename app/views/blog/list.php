@@ -1,8 +1,3 @@
-<div class="homelinkblog">
-	<p><a href="<?=BASEURL;?>">&lt; home</a></p>
-	<p><a href="<?=BASEURL;?>/blog">&lt; blog</a></p>
-</div>
-
 <div class="tagTitle">
 	<h1>Posts on Blog&nbsp;&nbsp;</h1>
 </div>
@@ -26,8 +21,3 @@ if ($readtime >= 1)
 </li>
 </ul>
 <?php endforeach; ?>
-
-<div class="homelinkblog">
-	<p><a href="<?=BASEURL;?>/blog">&lt; blog</a></p>
-   	<p><a href="<?=BASEURL;?>">&lt; home</a></p>
-</div>

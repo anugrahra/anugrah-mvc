@@ -23,7 +23,7 @@
 						<li><a href="podcast">podcast</a></li>
 						<li><a href="https://github.com/anugrahra">github</a></li>
 						<li><a href="mailto:dialog.anugrah@gmail.com">email me</a></li>
-						<li><a href="life">curious about me?</a></li>
+						<li><a href="life">me?</a></li>
 					</ul>
 				</nav>
 			</main>

@@ -5,9 +5,11 @@ class Blog extends Controller {
     {
         $data['title'] = 'Blog dekadensiotak';
         $data['post'] = $this->model('Blog_model')->getAllPostLimited();
+        $data['linkblog'] = '';
         $this->view('templates/header', $data);
-        $this->view('templates/homelinkblog');
+        $this->view('templates/homelinkblog', $data);
         $this->view('blog/index', $data);
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 
@@ -32,9 +34,12 @@ class Blog extends Controller {
     public function list()
     {
         $data['title'] = 'Post list of Blog dekadensiotak';
+        $data['linkblog'] = '<p><a href="../blog">&lt; blog</a></p>';
         $data['list'] = $this->model('Blog_model')->getAllPost();
         $this->view('templates/header', $data);
+        $this->view('templates/homelinkblog', $data);
         $this->view('blog/list', $data);
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 
@@ -43,9 +48,11 @@ class Blog extends Controller {
         $data['title'] = 'Blog dekadensiotak';
         $data['bytag'] = $this->model('Blog_model')->getAllPostByTag($tag);
         $data['label'] = $this->model('Blog_model')->forTagLabel($tag);
+        $data['linkblog'] = '<p><a href="../../blog">&lt; blog</a></p>';
         $this->view('templates/header', $data);
-        $this->view('templates/homelinkblog');
+        $this->view('templates/homelinkblog', $data);
         $this->view('blog/tag', $data);
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 }

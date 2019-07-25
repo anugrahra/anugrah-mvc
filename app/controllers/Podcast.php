@@ -6,10 +6,11 @@ class Podcast extends Controller {
         $data['title'] = 'Podcast dekadensiotak';
         $data['episodes'] = $this->model('Podcast_model')->getAllEpisode();
         $data['recent'] = $this->model('Podcast_model')->getRecentEpisode();
+        $data['linkblog'] = '';
         $this->view('templates/header', $data);
         $this->view('templates/homelink');
         $this->view('podcast/index', $data);
-        $this->view('templates/homelinkbottom');
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 
