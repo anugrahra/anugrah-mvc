@@ -4,7 +4,7 @@ class Blog extends Controller {
     public function index()
     {
         $data['title'] = 'Blog dekadensiotak';
-        $data['post'] = $this->model('Blog_model')->getAllPostLimited();
+        $data['post'] = $this->model('Blog_model')->getAllPostLimited($perPage = 3);
         $data['linkblog'] = '';
         $this->view('templates/header', $data);
         $this->view('templates/homelinkblog', $data);
@@ -16,9 +16,11 @@ class Blog extends Controller {
     public function page($start)
     {
         $data['title'] = 'Blog dekadensiotak';
+        $data['linkblog'] = '';
         $this->view('templates/header', $data);
-        $this->view('templates/homelinkblog');
+        $this->view('templates/homelinkblog', $data);
         $this->view('blog/page', $data);
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 

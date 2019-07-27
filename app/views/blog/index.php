@@ -1,4 +1,6 @@
-<?php foreach ($data['post'] as $post):
+<?php
+$perPage = 4;
+foreach ($data['post'] as $post):
 
 //spasi paragraf
 $pecah = explode("\r\n\r\n", $post['isi']);

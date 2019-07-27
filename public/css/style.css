@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #F2F2F2;
 }
 
 a {
@@ -159,7 +160,7 @@ hr {
 
 .tagTitle {
     background-color: #E6E6E6;
-    text-align: right;
+    text-align: center;
 }
 /* END OF BLOG */
 

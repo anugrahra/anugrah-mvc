@@ -15,10 +15,9 @@ class Blog_model {
         return $this->db->resultSet();
     }
 
-    public function getAllPostLimited()
+    public function getAllPostLimited($perPage)
     {
-
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 3');
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 3, ' . $perPage);
         return $this->db->resultSet();
     }
 
