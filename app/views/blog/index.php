@@ -1,6 +1,4 @@
-<?php
-$perPage = 4;
-foreach ($data['post'] as $post):
+<?php foreach ($data['post'] as $post):
 
 //spasi paragraf
 $pecah = explode("\r\n\r\n", $post['isi']);
@@ -34,5 +32,5 @@ if ($readtime >= 1)
 <?php endforeach; ?>
 
 <div class="prevnext">
-	<a href="blog/page/2">Prev ></a>
+	<a href="blog/page/3/3">Prev ></a>
 </div>

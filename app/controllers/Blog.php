@@ -13,10 +13,11 @@ class Blog extends Controller {
         $this->view('templates/footer');
     }
 
-    public function page($start)
+    public function page($start, $perPage)
     {
         $data['title'] = 'Blog dekadensiotak';
         $data['linkblog'] = '';
+        $data['post'] = $this->model('Blog_model')->getAllPostLimitedFrom2($start, $perPage);
         $this->view('templates/header', $data);
         $this->view('templates/homelinkblog', $data);
         $this->view('blog/page', $data);

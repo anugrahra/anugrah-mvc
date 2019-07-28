@@ -170,7 +170,12 @@ hr {
     text-align: center;
 }
 
-.framePodcast {
+.framePodcast, iframe{
+    background-color: #E6E6E6;
+}
+
+.tengahPodcast {
+    text-align: center;
     background-color: #E6E6E6;
 }
 
@@ -183,3 +188,52 @@ hr {
     margin-top: 5px;
 }
 /* END OF PODCAST */
+
+/* KALAU KECIL */
+@media screen and (max-width: 880px) {
+
+    .headerhome, .tagline {
+        font-size: 0.81em;
+    }
+
+    .isi {
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    .mainisi {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        color: rgb(87, 87, 87);
+        font-family: 'IBM Plex Serif', serif;
+    }
+
+    .footerhome {
+        font-size: 0.7rem;
+    }
+
+    .aftertitle {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .title {
+        font-size: 0.9rem;
+    }
+
+    .content {
+        word-spacing: 1px;
+        letter-spacing: .00836rem;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
+}
+/* END OF KALAU KECIL */

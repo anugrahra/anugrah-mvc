@@ -17,7 +17,13 @@ class Blog_model {
 
     public function getAllPostLimited($perPage)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 3, ' . $perPage);
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 0, ' . $perPage);
+        return $this->db->resultSet();
+    }
+
+    public function getAllPostLimitedFrom2($start, $perPage)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT ' . $start . ', ' . $perPage);
         return $this->db->resultSet();
     }
 
