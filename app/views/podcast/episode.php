@@ -1,3 +1,17 @@
+<?php
+$data['episode']['anchor']
+$data['episode']['caption']
+
+// Spasi Paragraf
+$pecah = explode("\r\n\r\n", $isi);
+$text = "";
+for($i=0; $i<=count($pecah)-1; $i++)
+{
+    $part = str_replace($pecah[$i], "<p class='content'>".$pecah[$i]."</p><br>", $pecah[$i]);
+    $text .= $part;
+}
+?>
+
 <header class="headerpodcast">
 	<h1>Podcast <i>dekadensiotak</i></h1>
 </header>
@@ -5,10 +19,10 @@
 	<p>My Code Learning Journal ☕ // New episode every weekend</p>
 </div>
 
-<?php foreach ($data['recent'] as $recent) : ?>
+<?php foreach ($data['episode'] as $episode) : ?>
 	<div class="framePodcast">
-		<iframe src="<?=$recent['anchor'];?>" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
-		<p class="tengahPodcast"><?=$recent['caption'];?></p>
+		<iframe src="<?=$episode['anchor'];?>" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
+		<p class="tengahPodcast"><?=$episode['caption'];?></p>
 		<br>
 	</div>
 <?php endforeach; ?>
@@ -21,13 +35,14 @@
 <br>
 <hr>
 <br>
-<h1 class="tengah">List of Episodes</h1>
+<h1 class="tengah">Note</h1>
 
 <br>
 
-<?php foreach ($data['episodes'] as $episodes) : ?>
-	<div class="listepisodes">
-		<h1 class="titlepodcast"><a href="<?=BASEURL;?>/podcast/episode/<?=$episodes['slug'];?>"><?=$episodes['no_episode'];?>.&nbsp;<?=$episodes['judul'];?></a></h1>
-		<p class="captionpodcast"><?=$episodes['caption'];?></p>
+<div class="artikel">
+	<div class="title">
+		<h1>Note:</h1>
 	</div>
-<?php endforeach; ?>
+	<br>
+	<p class="content"><?=$text;?></p>
+</div>

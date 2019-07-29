@@ -29,8 +29,11 @@ class Blog extends Controller {
     {
         $data['post'] = $this->model('Blog_model')->getPostBySlug($slug);
         $data['title'] = $data['post']['judul'] . ' | Blog dekadensiotak';
+        $data['linkblog'] = '<p><a href="../../blog">&lt; blog</a></p>';
         $this->view('templates/header', $data);
+        $this->view('templates/homelinkblog', $data);
         $this->view('blog/post', $data);
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 

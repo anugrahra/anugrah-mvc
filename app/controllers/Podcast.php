@@ -4,7 +4,7 @@ class Podcast extends Controller {
     public function index()
     {
         $data['title'] = 'Podcast dekadensiotak';
-        $data['episodes'] = $this->model('Podcast_model')->getAllEpisode();
+        $data['episodes'] = $this->model('Podcast_model')->getAllEpisodeLimited($perPage = 10);
         $data['recent'] = $this->model('Podcast_model')->getRecentEpisode();
         $data['linkblog'] = '';
         $this->view('templates/header', $data);
@@ -29,9 +29,10 @@ class Podcast extends Controller {
 
     public function episode($slug)
     {
-        $data['post'] = $this->model('Podcast_model')->getEpisodeBySlug($slug);
-        $data['title'] = $data['post']['judul'] . ' | Podcast dekadensiotak';
+        $data['episode'] = $this->model('Podcast_model')->getEpisodeBySlug($slug);
+        $data['title'] = $data['episode']['judul'] . ' | Podcast dekadensiotak';
         $this->view('templates/header', $data);
+        $this->view('templates/homelink');
         $this->view('podcast/episode', $data);
         $this->view('templates/footer');
     }

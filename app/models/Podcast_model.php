@@ -27,4 +27,16 @@ class Podcast_model {
         $this->db->bind('slug', $slug);
         return $this->db->single();
     }
+
+    public function getAllEpisodeLimited($perPage)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 0, ' . $perPage);
+        return $this->db->resultSet();
+    }
+
+    public function getAllEpisodeLimitedFrom2($start, $perPage)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT ' . $start . ', ' . $perPage);
+        return $this->db->resultSet();
+    }
 }
