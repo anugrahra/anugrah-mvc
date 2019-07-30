@@ -32,5 +32,5 @@ if ($readtime >= 1)
 <?php endforeach; ?>
 
 <div class="prevnext">
-	<a href="blog/page/3/3">Prev ></a>
+	<a href="<?=BASEURL;?>/blog/page/3/3">Prev ></a>
 </div>

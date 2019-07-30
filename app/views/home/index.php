@@ -15,7 +15,7 @@
 			</header>
 			<main>
 				<div class="tagline">
-					<p>A Plumber who learns Coding ☕</p>
+					<p>a plumber who learns coding</p>
 				</div>
 				<nav class="homemenu">
 					<ul>

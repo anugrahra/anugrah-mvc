@@ -5,7 +5,23 @@
 	<p>My Code Learning Journal ☕ // New episode every weekend</p>
 </div>
 
-<?php foreach ($data['recent'] as $recent) : ?>
+<?php
+//paginasi
+$pecahkan = rtrim($_SERVER['REQUEST_URI'], '/');
+$pecahkan = explode('/', $pecahkan);
+
+$start = $pecahkan[4];
+$perPage = $pecahkan[5];
+
+$startprev = $start + 10;
+$startnext = $start - 10;
+
+if($startnext < 0){
+    $startnext = 0;
+}
+
+foreach ($data['recent'] as $recent) : ?>
+	<p><b>Episode <a href="<?=$recent['slug'];?>"><?=$recent['no_episode'];?>.&nbsp;<?=$recent['judul'];?></a></b></p>
 	<div class="framePodcast">
 		<iframe src="<?=$recent['anchor'];?>" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
 		<p class="tengahPodcast"><?=$recent['caption'];?></p>
@@ -31,3 +47,9 @@
 		<p class="captionpodcast"><?=$episodes['caption'];?></p>
 	</div>
 <?php endforeach; ?>
+
+<br>
+
+<div class="prevnext">
+	<a href="<?=BASEURL;?>/podcast/page/<?=$startnext;?>/10">< Next</a> <a href="<?=BASEURL;?>/podcast/page/<?=$startprev;?>/10">Prev ></a>
+</div>

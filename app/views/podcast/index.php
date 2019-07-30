@@ -2,10 +2,11 @@
 	<h1>Podcast <i>dekadensiotak</i></h1>
 </header>
 <div class="tagline">
-	<p>My Code Learning Journal ☕ // New episode every weekend</p>
+	<p>Jurnal Ngoding ☕ // New episode every weekend</p>
 </div>
 
 <?php foreach ($data['recent'] as $recent) : ?>
+	<p><b>Episode <a href="<?=$recent['slug'];?>"><?=$recent['no_episode'];?>.&nbsp;<?=$recent['judul'];?></a></b></p>
 	<div class="framePodcast">
 		<iframe src="<?=$recent['anchor'];?>" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
 		<p class="tengahPodcast"><?=$recent['caption'];?></p>
@@ -31,3 +32,9 @@
 		<p class="captionpodcast"><?=$episodes['caption'];?></p>
 	</div>
 <?php endforeach; ?>
+
+<br>
+
+<div class="prevnext">
+	<a href="<?=BASEURL;?>/podcast/page/10/10">Prev ></a>
+</div>

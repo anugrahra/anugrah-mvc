@@ -28,7 +28,7 @@ hr {
 
 .prevnext {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0;
 }
 
 /* INDEX */
@@ -44,7 +44,7 @@ hr {
 }
 
 .tagline {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .headerhome {
@@ -219,7 +219,7 @@ hr {
     }
 
     .aftertitle {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         letter-spacing: 0.1rem;
     }

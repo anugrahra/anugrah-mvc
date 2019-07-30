@@ -2,6 +2,9 @@
 $anchor = $data['episode']['anchor'];
 $caption = $data['episode']['caption'];
 $note = $data['episode']['note'];
+$slug = $data['episode']['slug'];
+$no_episode = $data['episode']['no_episode'];
+$judul = $data['episode']['judul'];
 
 // Spasi Paragraf
 $pecah = explode("\r\n\r\n", $note);
@@ -18,6 +21,8 @@ for($i=0; $i<=count($pecah)-1; $i++)
 </header>
 <div class="tagline">
 	<p>My Code Learning Journal ☕ // New episode every weekend</p>
+	<br>
+	<b>Episode <a href="<?=$slug;?>"><?=$no_episode;?>.&nbsp;<?=$judul;?></a></b>
 </div>
 
 <div class="framePodcast">
