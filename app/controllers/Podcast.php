@@ -31,9 +31,11 @@ class Podcast extends Controller {
     {
         $data['episode'] = $this->model('Podcast_model')->getEpisodeBySlug($slug);
         $data['title'] = $data['episode']['judul'] . ' | Podcast dekadensiotak';
+        $data['linkblog'] = '';
         $this->view('templates/header', $data);
-        $this->view('templates/homelink');
+        $this->view('templates/homelinkpodcast');
         $this->view('podcast/episode', $data);
+        $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
 }

@@ -17,7 +17,7 @@ if ($readtime >= 1)
 ?>
 <ul>
 <li class="list">
-    <a href="blog/<?=$row['slug'];?>" style="color: black;"><b><?= $row['judul']; ?></b></a> | <span style="color: grey;"><?= date('d F Y', strtotime($row['waktu'])); ?> • <?=$readtime;?> • </span><a href="post/tag/<?=$row['tag'];?>" style="color: orange;"><b><?= $row['tag']; ?></b></a>
+    <a href="blog/<?=$row['slug'];?>" style="color: black;"><b><?= $row['judul']; ?></b></a> | <span style="color: grey;"><?= date('d F Y', strtotime($row['waktu'])); ?> • <?=$readtime;?> • </span><a href="<?=BASEURL;?>/blog/tag/<?=$row['tag'];?>" style="color: orange;"><b><?= $row['tag']; ?></b></a>
 </li>
 </ul>
 <?php endforeach; ?>

@@ -1,6 +1,6 @@
 <div class="tagTitle">
 <?php foreach ($data['label'] as $label): ?>
-    <h1><?=$label['tag']?>&nbsp;&nbsp;</h1>
+    <h1>Tag: <?=$label['tag']?>&nbsp;&nbsp;</h1>
 <?php endforeach; ?>
 </div>
 
@@ -33,7 +33,7 @@ if ($readtime >= 1)
 	<div class="title">
 		<h1><a href="<?=BASEURL;?>/blog/post/<?=$post['slug'];?>"><?= $post['judul']; ?></a></h1>
 	</div>
-	<div class="aftertitle"><?= date('d F Y', strtotime($post['waktu'])); ?> • <?=$readtime;?> • <a href="blog/tag/<?=$post['tag'];?>"><?= $post['tag']; ?></a></div>
+	<div class="aftertitle"><?= date('d F Y', strtotime($post['waktu'])); ?> • <?=$readtime;?> • <a href="<?=BASEURL;?>/blog/tag/<?=$post['tag'];?>"><?= $post['tag']; ?></a></div>
 	<p class="content"><?=$text;?></p>
 </div>
 

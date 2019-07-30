@@ -1,5 +1,4 @@
 <br>
 <div class="homelink">
-	<?=$data['linkblog'];?>
-	<p><a href="<?=BASEURL;?>">&lt; home</a></p>
+	<p><a href="<?=BASEURL;?>">&lt; home</a><?=$data['linkblog'];?></p>
 </div>

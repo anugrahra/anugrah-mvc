@@ -1,9 +1,10 @@
 <?php
-$data['episode']['anchor']
-$data['episode']['caption']
+$anchor = $data['episode']['anchor'];
+$caption = $data['episode']['caption'];
+$note = $data['episode']['note'];
 
 // Spasi Paragraf
-$pecah = explode("\r\n\r\n", $isi);
+$pecah = explode("\r\n\r\n", $note);
 $text = "";
 for($i=0; $i<=count($pecah)-1; $i++)
 {
@@ -19,13 +20,11 @@ for($i=0; $i<=count($pecah)-1; $i++)
 	<p>My Code Learning Journal ☕ // New episode every weekend</p>
 </div>
 
-<?php foreach ($data['episode'] as $episode) : ?>
-	<div class="framePodcast">
-		<iframe src="<?=$episode['anchor'];?>" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
-		<p class="tengahPodcast"><?=$episode['caption'];?></p>
-		<br>
-	</div>
-<?php endforeach; ?>
+<div class="framePodcast">
+	<iframe src="<?=$anchor;?>" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
+	<p class="tengahPodcast"><?=$caption;?></p>
+	<br>
+</div>
 
 <br>
 
@@ -34,8 +33,6 @@ for($i=0; $i<=count($pecah)-1; $i++)
 </div>
 <br>
 <hr>
-<br>
-<h1 class="tengah">Note</h1>
 
 <br>
 
