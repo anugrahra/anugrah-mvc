@@ -12,4 +12,15 @@ class Admin extends Controller {
         $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
     }
+
+    public function menu()
+    {
+        $data['title'] = 'Menu | Admin';
+        $data['linkblog'] = ' / logout';
+        $this->view('templates/header', $data);
+        $this->view('templates/homelink', $data);
+        $this->view('admin/menu', $data);
+        $this->view('templates/homelinkbottom', $data);
+        $this->view('templates/footer');
+    }
 }
