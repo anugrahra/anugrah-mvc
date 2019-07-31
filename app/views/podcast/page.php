@@ -43,7 +43,7 @@ foreach ($data['recent'] as $recent) : ?>
 
 <?php foreach ($data['episodes'] as $episodes) : ?>
 	<div class="listepisodes">
-		<h1 class="titlepodcast"><a href="podcast/<?=$episodes['slug'];?>"><?=$episodes['no_episode'];?>.&nbsp;<?=$episodes['judul'];?></a></h1>
+		<h1 class="titlepodcast"><a href="<?=BASEURL;?>/podcast/<?=$episodes['slug'];?>"><?=$episodes['no_episode'];?>.&nbsp;<?=$episodes['judul'];?></a></h1>
 		<p class="captionpodcast"><?=$episodes['caption'];?></p>
 	</div>
 <?php endforeach; ?>
