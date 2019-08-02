@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="isi">
 			<header class="headerhome">
-				<h1>anugrah ramadhan</h1>
+				<h1>anugrah r</h1>
 			</header>
 			<main>
 				<div class="tagline">

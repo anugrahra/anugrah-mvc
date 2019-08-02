@@ -192,7 +192,7 @@ hr {
 /* KALAU KECIL */
 @media screen and (max-width: 880px) {
 
-    .headerhome, .tagline {
+    .tagline {
         font-size: 0.81em;
     }
 
