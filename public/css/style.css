@@ -189,6 +189,14 @@ hr {
 }
 /* END OF PODCAST */
 
+/* ADMIN */
+.inputtext {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+/* END OF ADMIN */
+
 /* KALAU KECIL */
 @media screen and (max-width: 880px) {
 

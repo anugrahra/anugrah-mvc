@@ -47,4 +47,35 @@ class Blog_model {
         $this->db->bind('tag', $tag);
         return $this->db->resultSet();
     }
+
+    public function addPost($data)
+    {
+        $data['slug'] = strtolower(str_replace(" ", "-", $data['judul']));
+        $data['waktu'] = time();
+
+        $query = "INSERT INTO blogpost
+                    VALUES
+                ('', :judul, :isi, :waktu, :tag, :slug)";
+
+        $this->db->query($query);
+        $this->db->bind('judul', $data['judul']);
+        $this->db->bind('isi', $data['isi']);
+        $this->db->bind('waktu', $data['waktu']);
+        $this->db->bind('tag', $data['tag']);
+        $this->db->bind('slug', $data['slug']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
+    public function deletePost($id)
+    {
+		$query = "DELETE FROM blogpost WHERE id = :id";
+		$this->db->query($query);
+		$this->db->bind('id', $id);
+		$this->db->execute();
+		
+		return $this->db->rowCount();	
+    }
 }

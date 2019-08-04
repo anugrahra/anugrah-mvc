@@ -1,5 +1,5 @@
 <div class="tagTitle">
-	<h1>Posts on Blog&nbsp;&nbsp;</h1>
+	<h1>Posts on Blog</h1>
 </div>
 
 <br>

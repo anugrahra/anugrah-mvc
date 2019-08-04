@@ -8,7 +8,7 @@ class Podcast extends Controller {
         $data['recent'] = $this->model('Podcast_model')->getRecentEpisode();
         $data['linkblog'] = '';
         $this->view('templates/header', $data);
-        $this->view('templates/homelink');
+        $this->view('templates/homelink', $data);
         $this->view('podcast/index', $data);
         $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
@@ -21,7 +21,7 @@ class Podcast extends Controller {
         $data['recent'] = $this->model('Podcast_model')->getRecentEpisode();
         $data['linkblog'] = '';
         $this->view('templates/header', $data);
-        $this->view('templates/homelink');
+        $this->view('templates/homelink', $data);
         $this->view('podcast/page', $data);
         $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
@@ -31,9 +31,9 @@ class Podcast extends Controller {
     {
         $data['episode'] = $this->model('Podcast_model')->getEpisodeBySlug($slug);
         $data['title'] = $data['episode']['judul'] . ' | Podcast dekadensiotak';
-        $data['linkblog'] = '';
+        $data['linkblog'] = ' / <a href="../../podcast">podcast</a>';
         $this->view('templates/header', $data);
-        $this->view('templates/homelinkpodcast');
+        $this->view('templates/homelink', $data);
         $this->view('podcast/episode', $data);
         $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
