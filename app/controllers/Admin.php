@@ -13,6 +13,24 @@ class Admin extends Controller {
         $this->view('templates/footer');
     }
 
+	public function login()
+	{
+		//cek username
+		if($this->model('Admin_model')->sistemLogin($_POST) > 0) {
+			$_SESSION["login"] = true;
+			header('Location: ' . BASEURL . '/koleksi');
+			//cek ingat saya
+			if( isset($_POST['remember']) ) {
+				//bikin cookie
+				setcookie('signin', 'true', time() + 604800);
+			}
+			exit;
+		} else {
+			echo "USERNAME / PASSWORD SALAH!";
+			exit;
+		}
+	}
+
     public function menu()
     {
         $data['title'] = 'Admin | Menu';
@@ -24,6 +42,7 @@ class Admin extends Controller {
         $this->view('templates/footer');
     }
 
+    // BLOG
     public function addpost()
     {
         $data['title'] = 'Admin | Add New Post';
@@ -55,6 +74,33 @@ class Admin extends Controller {
         $this->view('templates/footer');
     }
 
+    public function editpost($id)
+    {
+        $data['linkblog'] = ' / <a href="../menu">menu</a> / <a href="../editdeletepost">edit/delete</a> / <a href="../logout">logout</a>';
+        $data['post'] = $this->model('Blog_model')->getPostById($id);
+        $data['title'] = 'Edit ' . $data['post']['judul'] . ' | Admin';
+        $this->view('templates/header', $data);
+        $this->view('templates/homelink', $data);
+        $this->view('admin/editpost', $data);
+        $this->view('templates/homelinkbottom', $data);
+        $this->view('templates/footer');
+    }
+
+    public function editthispost($id)
+    {
+
+    }
+
+    public function deletepost($id)
+    {
+		if($this->model('Blog_model')->deletePost($id) > 0) {
+			header('Location: ' . BASEURL . '/admin/editdeletepost');
+			exit;
+        }
+    }
+    // END OF BLOG
+
+    // PODCAST
     public function addepisode()
     {
         $data['title'] = 'Admin | Add New Episode';
@@ -86,12 +132,16 @@ class Admin extends Controller {
         $this->view('templates/footer');
     }
 
-    public function deletepost($id)
+    public function editepisode($id)
     {
-		if($this->model('Blog_model')->deletePost($id) > 0) {
-			header('Location: ' . BASEURL . '/admin/editdeletepost');
-			exit;
-        }
+        $data['linkblog'] = ' / <a href="../menu">menu</a> / <a href="../editdeleteepisode">edit/delete</a> / <a href="../logout">logout</a>';
+        $data['episode'] = $this->model('Podcast_model')->getEpisodeById($id);
+        $data['title'] = 'Edit ' . $data['episode']['no_episode'] . '. ' . $data['episode']['judul'] . ' | Admin';
+        $this->view('templates/header', $data);
+        $this->view('templates/homelink', $data);
+        $this->view('admin/editepisode', $data);
+        $this->view('templates/homelinkbottom', $data);
+        $this->view('templates/footer');
     }
 
     public function deleteepisode($id)
@@ -101,6 +151,7 @@ class Admin extends Controller {
 			exit;
         }
     }
+    // END OF PODCAST
 
     public function logout()
     {

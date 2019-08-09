@@ -34,6 +34,13 @@ class Blog_model {
         return $this->db->single();
     }
 
+    public function getPostById($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->bind('id', $id);
+        return $this->db->single();
+    }
+
     public function getAllPostByTag($tag)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE tag=:tag');

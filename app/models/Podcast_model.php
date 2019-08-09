@@ -28,6 +28,13 @@ class Podcast_model {
         return $this->db->single();
     }
 
+    public function getEpisodeById($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->bind('id', $id);
+        return $this->db->single();
+    }
+
     public function getAllEpisodeLimited($perPage)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id DESC LIMIT 0, ' . $perPage);
