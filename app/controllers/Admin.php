@@ -86,9 +86,12 @@ class Admin extends Controller {
         $this->view('templates/footer');
     }
 
-    public function editthispost($id)
+    public function editthispost()
     {
-
+        if($this->model('Blog_model')->editPost($_POST) > 0) {
+            header('Location: ' . BASEURL . '/admin/editdeletepost');
+            exit;
+        }
     }
 
     public function deletepost($id)
@@ -115,6 +118,11 @@ class Admin extends Controller {
     public function addpodcastepisode()
     {
         if($this->model('Podcast_model')->addEpisode($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'ditambahkan', 'green');
+            header('Location: ' . BASEURL . '/admin/editdeleteepisode');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'ditambahkan', 'red');
             header('Location: ' . BASEURL . '/admin/editdeleteepisode');
             exit;
         }
@@ -142,6 +150,14 @@ class Admin extends Controller {
         $this->view('admin/editepisode', $data);
         $this->view('templates/homelinkbottom', $data);
         $this->view('templates/footer');
+    }
+
+    public function editthisepisode()
+    {
+        if($this->model('Podcast_model')->editEpisode($_POST) > 0) {
+            header('Location: ' . BASEURL . '/admin/editdeleteepisode');
+            exit;
+        }
     }
 
     public function deleteepisode($id)

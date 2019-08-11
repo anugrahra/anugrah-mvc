@@ -68,6 +68,34 @@ class Podcast_model {
         return $this->db->rowCount();
     }
 
+    public function editEpisode($data)
+    {
+        $data['slug'] = strtolower(str_replace(" ", "-", $data['judul']));
+
+        $query = "UPDATE episode
+                    SET
+                    no_episode = :no_episode,
+                    judul = :judul,
+                    anchor = :anchor,
+                    caption = :caption,
+                    note = :note,
+                    slug = :slug
+                    WHERE id = :id";
+
+		$this->db->query($query);
+		$this->db->bind('no_episode', $data['no_episode']);
+		$this->db->bind('judul', $data['judul']);
+		$this->db->bind('anchor', $data['anchor']);
+		$this->db->bind('caption', $data['caption']);
+		$this->db->bind('note', $data['note']);
+		$this->db->bind('slug', $data['slug']);
+        $this->db->bind('id', $data['id']);
+        
+        $this->db->execute();
+        
+		return $this->db->rowCount();
+    }
+
     public function deleteEpisode($id)
     {
 		$query = "DELETE FROM episode WHERE id = :id";

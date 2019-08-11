@@ -27,6 +27,7 @@
 					</ul>
 				</nav>
 			</main>
+			<br>
 			<footer class="footerhome">
 				<p><i>dekadensiotak</i> &copy; 2017 - present.</p>
 			</footer>

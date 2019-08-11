@@ -76,6 +76,30 @@ class Blog_model {
         return $this->db->rowCount();
     }
 
+    public function editPost($data)
+    {
+        $data['slug'] = strtolower(str_replace(" ", "-", $data['judul']));
+
+        $query = "UPDATE blogpost
+                    SET
+                    judul = :judul,
+                    isi = :isi,
+                    tag = :tag,
+                    slug = :slug
+                    WHERE id = :id";
+
+		$this->db->query($query);
+		$this->db->bind('judul', $data['judul']);
+		$this->db->bind('isi', $data['isi']);
+		$this->db->bind('tag', $data['tag']);
+		$this->db->bind('slug', $data['slug']);
+        $this->db->bind('id', $data['id']);
+        
+        $this->db->execute();
+        
+		return $this->db->rowCount();
+    }
+
     public function deletePost($id)
     {
 		$query = "DELETE FROM blogpost WHERE id = :id";

@@ -2,7 +2,8 @@
 
 <br>
 
-<form method="post">
+<form method="post" action="<?=BASEURL;?>/admin/editthispost">
+	<input type="hidden" name="id" class="inputtext" value="<?=$data['post']['id'];?>">
 	<label for="judul">Judul</label><br>
 	<input type="text" name="judul" class="inputtext" value="<?=$data['post']['judul'];?>"><br>
 	<label for="isi">Isi</label><br>

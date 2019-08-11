@@ -2,7 +2,8 @@
 
 <br>
 
-<form method="post">
+<form method="post" action="<?=BASEURL;?>/admin/editthisepisode">
+	<input type="hidden" name="id" class="inputtext" value="<?=$data['episode']['id'];?>">
 	<label for="no_episode">No Episode</label><br>
 	<input type="number" name="no_episode" class="inputtext" value="<?=$data['episode']['no_episode'];?>"><br>
 	<label for="judul">Judul</label><br>
