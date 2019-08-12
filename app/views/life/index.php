@@ -1,6 +1,5 @@
 <p class="content">
-	<img src="<?=BASEURL;?>/public/img/mypicture.jpg">
-	Hi! I'm Anugrah, a plumber who learns coding ☕<br><br>
+	Hi! I'm Anugrah, a plumber who learns coding ☕<img src="<?=BASEURL;?>/public/img/mypicture.jpg" class="myphoto"><br><br>
 	Aku ini terinspirasi dari <a href="https://108kb.io" style="text-decoration: underline;">Fariz</a> yang menurutku idenya itu keren sekali. Maka kucontek di halaman ini.
 </p>
 

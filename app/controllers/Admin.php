@@ -1,35 +1,15 @@
 <?php
 
 class Admin extends Controller {
-    public function index()
-    {
-        $data['title'] = 'Admin';
-        $data['linkblog'] = '';
-        $data['error'] = '';
-        $this->view('templates/header', $data);
-        $this->view('templates/homelink', $data);
-        $this->view('admin/index', $data);
-        $this->view('templates/homelinkbottom', $data);
-        $this->view('templates/footer');
-    }
-
-	public function login()
-	{
-		//cek username
-		if($this->model('Admin_model')->sistemLogin($_POST) > 0) {
-			$_SESSION["login"] = true;
-			header('Location: ' . BASEURL . '/koleksi');
-			//cek ingat saya
-			if( isset($_POST['remember']) ) {
-				//bikin cookie
-				setcookie('signin', 'true', time() + 604800);
-			}
-			exit;
-		} else {
-			echo "USERNAME / PASSWORD SALAH!";
-			exit;
-		}
-	}
+    
+    // public function __construct()
+    // {
+    //     if(!isset($_SESSION['login'])) {
+    //         header('Location: ' . BASEURL . '/auth');
+    //     } else (
+    //         header('Location: ' . BASEURL . '/admin/menu');
+    //     )
+    // }
 
     public function menu()
     {
@@ -57,7 +37,12 @@ class Admin extends Controller {
     public function addblogpost()
     {
         if($this->model('Blog_model')->addPost($_POST) > 0) {
-            header('Location: ' . BASEURL . '/admin/editdeletepost/');
+            Flasher::setFlash('berhasil', 'ditambahkan', 'green');
+            header('Location: ' . BASEURL . '/admin/editdeletepost');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'ditambahkan', 'red');
+            header('Location: ' . BASEURL . '/admin/editdeletepost');
             exit;
         }
     }
@@ -89,6 +74,11 @@ class Admin extends Controller {
     public function editthispost()
     {
         if($this->model('Blog_model')->editPost($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'diubah', 'green');
+            header('Location: ' . BASEURL . '/admin/editdeletepost');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'diubah', 'red');
             header('Location: ' . BASEURL . '/admin/editdeletepost');
             exit;
         }
@@ -97,8 +87,13 @@ class Admin extends Controller {
     public function deletepost($id)
     {
 		if($this->model('Blog_model')->deletePost($id) > 0) {
+            Flasher::setFlash('berhasil', 'dihapus', 'green');
 			header('Location: ' . BASEURL . '/admin/editdeletepost');
-			exit;
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'diubah', 'red');
+            header('Location: ' . BASEURL . '/admin/editdeletepost');
+            exit;
         }
     }
     // END OF BLOG
@@ -155,6 +150,11 @@ class Admin extends Controller {
     public function editthisepisode()
     {
         if($this->model('Podcast_model')->editEpisode($_POST) > 0) {
+            Flasher::setFlash('berhasil', 'diubah', 'green');
+            header('Location: ' . BASEURL . '/admin/editdeleteepisode');
+            exit;
+        } else {
+            Flasher::setFlash('gagal', 'diubah', 'red');
             header('Location: ' . BASEURL . '/admin/editdeleteepisode');
             exit;
         }
@@ -163,6 +163,11 @@ class Admin extends Controller {
     public function deleteepisode($id)
     {
 		if($this->model('Podcast_model')->deleteEpisode($id) > 0) {
+            Flasher::setFlash('berhasil', 'dihapus', 'green');
+			header('Location: ' . BASEURL . '/admin/editdeleteepisode');
+			exit;
+        } else {
+            Flasher::setFlash('gagal', 'dihapus', 'red');
 			header('Location: ' . BASEURL . '/admin/editdeleteepisode');
 			exit;
         }
@@ -171,6 +176,6 @@ class Admin extends Controller {
 
     public function logout()
     {
-        $this->view('admin/logout');
+        return $this->model('Admin_model')->logout();
     }
 }

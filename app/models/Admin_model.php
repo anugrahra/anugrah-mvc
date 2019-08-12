@@ -9,16 +9,17 @@ class Admin_model {
 		$this->db = new Database;
     }
     
-	public function sistemLogin($data)
+	public function login($data)
 	{
 		$query = "SELECT * FROM akun WHERE username = :username AND password = :password";
 		$this->db->query($query);
 		$this->db->bind('username', $data['username']);
-		$this->db->bind('password', md5($data['password']));
+		$this->db->bind('password', $data['password']));
 		$this->db->execute();
 		return $this->db->rowCount();
 	}
-	public function sistemLogout()
+	
+	public function logout()
 	{
 		setcookie('signin', '', time() - 3600);
 		$_SESSION = [];

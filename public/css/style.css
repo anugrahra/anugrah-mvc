@@ -197,6 +197,14 @@ hr {
 }
 /* END OF ADMIN */
 
+/* LIFE */
+.myphoto {
+    border-radius: 50%;
+    width: 25%;
+    float: right;
+}
+/* END OF LIFE */
+
 /* KALAU KECIL */
 @media screen and (max-width: 880px) {
 
