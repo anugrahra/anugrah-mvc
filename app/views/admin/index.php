@@ -3,7 +3,7 @@
 		<h1>Halo!</h1>
 	</div>
 	<br>
-	<form method="post">
+	<form method="post" action="<?=BASEURL;?>/admin/login">
 		<label for="username">Username</label><br>
 		<input type="text" name="username"><br>
 		<label for="password">Password</label><br>

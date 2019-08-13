@@ -14,14 +14,13 @@ class Admin_model {
 		$query = "SELECT * FROM akun WHERE username = :username AND password = :password";
 		$this->db->query($query);
 		$this->db->bind('username', $data['username']);
-		$this->db->bind('password', $data['password']));
+		$this->db->bind('password', $data['password']);
 		$this->db->execute();
 		return $this->db->rowCount();
 	}
 	
 	public function logout()
 	{
-		setcookie('signin', '', time() - 3600);
 		$_SESSION = [];
 		session_unset();
 		session_destroy();
