@@ -23,10 +23,13 @@ class Admin extends Controller {
             header('Location: ' . BASEURL . '/admin/menu');
             exit;
         } else {
-            echo "anjing";
+            echo '<script type="text/javascript">'; 
+            echo 'alert("Wrong, man! You are wrong!");'; 
+            echo 'window.location.href = "admin";';
+            echo '</script>';
         }
     }
-    
+
     public function menu()
     {
         if(!isset($_SESSION['login'])) header('Location: ' . BASEURL . '/admin');

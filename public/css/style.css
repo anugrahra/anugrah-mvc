@@ -190,10 +190,31 @@ hr {
 /* END OF PODCAST */
 
 /* ADMIN */
+.inputlogin {
+    height: 2em;
+    width: 20em;    
+}
+
 .inputtext {
     width: 100%;
     padding: 5px;
     margin-bottom: 2px;
+}
+
+.tombol {
+    display: block;
+    position: relative;
+    width: 70px;
+    padding: 0;
+    margin: 5px 20px 5px 0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 0.2s;
+    background: #5DC8CD;
+    box-shadow: 0px 5px 0px 0px #1E8185;
 }
 /* END OF ADMIN */
 
