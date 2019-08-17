@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="isi">
 			<header class="headerhome">
-				<h1>anugrah r</h1>
+				<h1 id="app">anugrah r</h1>
 			</header>
 			<main>
 				<div class="tagline">
@@ -24,6 +24,7 @@
 						<li><a href="life">me?</a></li>
 					</ul>
 
+					<!-- thanks to freepik -->
 					<a href="mailto:dialog.anugrah@gmail.com" class="sosmed">
 						<img src="<?=ASSETS;?>/img/gmail-icon.png" alt="dialog.anugrah@gmail.com" class="sosmed">
 					</a>
@@ -42,5 +43,8 @@
 			</footer>
 		</div>		
 	</div>
+	
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="<?=ASSETS;?>/js/script.js"></script>
 </body>
 </html>

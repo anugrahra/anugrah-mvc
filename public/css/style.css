@@ -33,7 +33,7 @@ hr {
 
 .mainfooter {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-size: 0.75em;
     color: grey;
@@ -73,7 +73,7 @@ hr {
 }
 
 .homemenu {
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 .homemenu ul {
@@ -109,6 +109,12 @@ hr {
     font-family: 'Courier', serif;
     margin-top: 10px;
     margin-bottom: 25px;
+}
+
+.homelinkbottom {
+    font-family: 'Courier', serif;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .homelinkblog {

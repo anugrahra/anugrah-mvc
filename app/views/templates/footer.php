@@ -1,6 +1,16 @@
 	</div>
 <footer class="mainfooter">
-	<p class="menublog"><i>dekadensiotak</i> &copy; 2017 - present.</p>
+	<a href="mailto:dialog.anugrah@gmail.com" class="sosmed">
+		<img src="<?=ASSETS;?>/img/gmail-icon.png" alt="dialog.anugrah@gmail.com" class="sosmed">
+	</a>
+	<a href="https://github.com/anugrahra" class="sosmed">
+		<img src="<?=ASSETS;?>/img/github-icon.png" alt="github.com/anugrahra" class="sosmed">
+	</a>
+	<a href="https://twitter.com/dekadensiotak" class="sosmed">
+		<img src="<?=ASSETS;?>/img/twitter-icon.png" alt="twitter.com/dekadensiotak" class="sosmed">
+	</a>
+	<br><br>
+	<p><i>dekadensiotak</i> &copy; 2017 - present.</p>
 </footer>
 </div>
 
