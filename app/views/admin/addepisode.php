@@ -13,5 +13,5 @@
 	<textarea name="note" rows="20" class="inputtext"></textarea><br>
 	<label for="anchor">Link Anchor</label><br>
 	<input type="text" name="anchor" class="inputtext"><br><br>
-	<input type="submit" name="submit" value="Post!">
+	<input type="submit" name="submit" value="Post!" class="tombol">
 </form>

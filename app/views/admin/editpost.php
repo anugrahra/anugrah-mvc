@@ -10,5 +10,5 @@
 	<textarea name="isi" rows="20" class="inputtext"><?=$data['post']['isi'];?></textarea><br>
 	<label for="tag">Tag</label><br>
 	<input type="text" name="tag" class="inputtext" value="<?=$data['post']['tag'];?>"><br><br>
-	<input type="submit" name="submit" value="Edit!">
+	<input type="submit" name="submit" value="Edit!" class="tombol">
 </form>

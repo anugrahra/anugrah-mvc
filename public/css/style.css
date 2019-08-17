@@ -31,6 +31,14 @@ hr {
     margin-bottom: 0;
 }
 
+.mainfooter {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    color: grey;
+}
+
 /* INDEX */
 .container {
     height: 100vh;
@@ -81,12 +89,18 @@ hr {
     color: grey;
 }
 
-.mainfooter {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-size: 0.75em;
-    color: grey;
+.sosmed {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.sosmed {
+    width: 25px;
+}
+
+.sosmed:hover {
+    text-decoration: none;
+    transform: rotate(15deg);
 }
 /* END OF INDEX */
 

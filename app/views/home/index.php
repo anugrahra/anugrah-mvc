@@ -19,12 +19,21 @@
 				</div>
 				<nav class="homemenu">
 					<ul>
-						<li><a href="https://github.com/anugrahra">github</a></li>
-						<li><a href="blog">blog</a></li>
+						<li><a href="<?=BASEURL;?>/blog">blog</a></li>
 						<li><a href="podcast">podcast</a></li>
-						<li><a href="mailto:dialog.anugrah@gmail.com">email me</a></li>
 						<li><a href="life">me?</a></li>
 					</ul>
+
+					<a href="mailto:dialog.anugrah@gmail.com" class="sosmed">
+						<img src="<?=ASSETS;?>/img/gmail-icon.png" alt="dialog.anugrah@gmail.com" class="sosmed">
+					</a>
+					<a href="https://github.com/anugrahra" class="sosmed">
+						<img src="<?=ASSETS;?>/img/github-icon.png" alt="github.com/anugrahra" class="sosmed">
+					</a>
+					<a href="https://twitter.com/dekadensiotak" class="sosmed">
+						<img src="<?=ASSETS;?>/img/twitter-icon.png" alt="twitter.com/dekadensiotak" class="sosmed">
+					</a>
+					
 				</nav>
 			</main>
 			<br>

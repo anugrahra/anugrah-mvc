@@ -9,5 +9,5 @@
 	<textarea name="isi" rows="20" class="inputtext"></textarea><br>
 	<label for="tag">Tag</label><br>
 	<input type="text" name="tag" class="inputtext"><br><br>
-	<input type="submit" name="submit" value="Post!">
+	<input type="submit" name="submit" value="Post!" class="tombol">
 </form>

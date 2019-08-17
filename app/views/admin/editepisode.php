@@ -14,5 +14,5 @@
 	<textarea name="note" rows="20" class="inputtext"><?=$data['episode']['note'];?></textarea><br>
 	<label for="anchor">Link Anchor</label><br>
 	<input type="text" name="anchor" class="inputtext" value="<?=$data['episode']['anchor'];?>"><br><br>
-	<input type="submit" name="submit" value="Post!">
+	<input type="submit" name="submit" value="Post!" class="tombol">
 </form>
