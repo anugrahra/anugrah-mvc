@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><?=$data['title'];?></title>
-	<link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <meta name="description" content="Website Anugrah Ramadhan" property="og:description">
+	<link rel="stylesheet" type="text/css" href="<?=ASSETS;?>/css/style.css">
+    <link rel="icon" href="<?=ASSETS;?>/icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
 	<div class="container">
 		<div class="isi">
 			<header class="headerhome">
-				<h1 id="app">anugrah r</h1>
+				<h1 id="typewriter"></h1>
 			</header>
 			<main>
 				<div class="tagline">
@@ -20,8 +22,8 @@
 				<nav class="homemenu">
 					<ul>
 						<li><a href="<?=BASEURL;?>/blog">blog</a></li>
-						<li><a href="podcast">podcast</a></li>
-						<li><a href="life">me?</a></li>
+						<li><a href="<?=BASEURL;?>/podcast">podcast</a></li>
+						<li><a href="<?=BASEURL;?>/life">me?</a></li>
 					</ul>
 
 					<!-- thanks to freepik -->

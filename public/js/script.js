@@ -1,4 +1,4 @@
-var app = document.getElementById('app');
+var app = document.getElementById('typewriter');
 
 var typewriter = new Typewriter(app, {
     loop: true,
@@ -7,6 +7,6 @@ var typewriter = new Typewriter(app, {
 });
 
 typewriter
-    .typeString('anugrah r')
+    .typeString('anugrah')
     .pauseFor(250000)
     .start();

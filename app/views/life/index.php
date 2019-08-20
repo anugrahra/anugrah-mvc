@@ -1,5 +1,9 @@
 <p class="content">
-	Hi! I'm Anugrah, a plumber who learns coding ☕<img src="<?=BASEURL;?>/public/img/mypicture.jpg" class="myphoto"><br><br>
+	Halo! Saya Anugrah Ramadhan. Seorang tukang ledeng yang lagi belajar ngoding ☕<img src="<?=BASEURL;?>/public/img/mypicture.jpg" class="myphoto"><br><br>
+	Sila kirim pesan ke <a href="mailto:dialog.anugrah@gmail.com" style="text-decoration: underline;">dialog.anugrah@gmail.com</a> kalau mau ngobrol.<br><br>
+
+	<hr>
+
 	Aku ini terinspirasi dari <a href="https://108kb.io" style="text-decoration: underline;">Fariz</a> yang menurutku idenya itu keren sekali. Maka kucontek di halaman ini.
 </p>
 
@@ -25,7 +29,7 @@
 <p class="content">
 	<b>• Coding</b>
 	<br>
-Aku belajar koding di waktu luangku. Lalu aku mencoba mengaplikasikan hasil pemebelajranku dengan membuat <a href="https://anugrah.club/lab" style="text-decoration: underline;">aplikasi yang berguna untuk tempatku bekerja</a>. Kini, aku sedang mempelajari PHP sebagai subjek utama pembelajaran.</p>
+Aku belajar koding di waktu luangku. Lalu aku mencoba mengaplikasikan hasil pemebelajaranku dengan membuat <a href="https://anugrah.club/lab" style="text-decoration: underline;">aplikasi yang berguna untuk tempatku bekerja</a>. Kini, aku sedang mempelajari PHP sebagai subjek utama pembelajaran.</p>
 
 <br>
 
